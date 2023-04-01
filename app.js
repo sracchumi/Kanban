@@ -1,29 +1,30 @@
 window.addEventListener('load', function() {
 
-   // Capturo lo que voy a usar 
+   /* Capturo lo que voy a usar  */
+
    const boton = document.querySelector('.agregarTarea');
 
    const seccionToDo = document.querySelector('.seccionToDo');
 
    const tarjeta = document.querySelector('.tarjeta');
-   
-   // FUNCION 1 - AGREGAR TAREAS
-   boton.addEventListener('click',function(){
-    let nuevaTarjeta = tarjeta.cloneNode(true);
-    seccionToDo.appendChild(nuevaTarjeta);
-    
-    })
 
-    //   FUNCION 2 - GUARDAR INFORMACION DE LA TARJETA
-    function guardarTexto(){
-        const input = document.getElementById("miInput");
-        let texto= "";
+   const input = document.getElementById('input');
+
+   /* FUNCION 1 - GUARDAR VALORES INGRESADOS */
+
+   input.addEventListener("keypress",guardarComentario);
+
+   function guardarComentario(event){
+
+    let textoTarjeta = "";
+
+    if(event.key === "Enter"){
         
-        input.addEventListener("keydown",function(event){
-            if(event.code===13){
-                texto = input.value;
-                console.log(texto);
-            }
-        })
+        textoTarjeta = input.value;
+        console.log(textoTarjeta);
+
     }
-});
+
+   }
+
+})
