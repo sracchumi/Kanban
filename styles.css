@@ -1,0 +1,44 @@
+/* Para aplicar a todo el documento */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* Disponemos las secciones una al lado de otra */
+.secciones{
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    text-align: center;
+    margin:2em;
+}
+/* Cada seccion tenga el mismo tamaño */
+.seccionToDo, .seccionInProgress, .seccionDone{
+    width: 50%;
+    font-family: 'Permanent Marker', cursive;
+    border: 1px solid #EEEEEE;
+    padding: 2% 1%;
+    margin: 1%;
+}
+
+.seccionToDo{
+    position: relative;
+}
+
+.tarjeta{
+    margin: 1em;
+}
+/* Modifico el campo para ingresar texto */
+.tarjeta input{
+    padding: 2.5% 5%;
+    text-align: center;
+}
+
+.agregarTarea{
+    border: none;
+    margin: 0 0.5em;
+    background-color: white;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}

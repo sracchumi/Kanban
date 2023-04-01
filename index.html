@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+</head>
+<body>
+    <article class="secciones">
+        <section class="seccionToDo">
+            <h2>To Do</h2>
+            <div class="tarjeta">
+                <label for="tarea"></label>
+                <input type="text" id="miInput" name="miInput" placeholder="Ingrese una tarea" required>
+            </div>
+            <button class="agregarTarea">+</button>
+        </section>
+        <section class="seccionInProgress">
+            <h2>In Progress</h2>
+        </section>
+        <section class="seccionDone">
+            <h2>Done</h2>
+        </section>
+    </article>
+</body>
+<script src="app.js"></script>
+</html>
